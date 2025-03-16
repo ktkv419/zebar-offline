@@ -89,13 +89,13 @@ body,
 
     .btn {
         &:hover {
-            color: var(--color-yellow) !important;
+            color: var(--color-blue) !important;
             background-color: transparent;
         }
 
         &.focused {
             color: var(--color-background);
-            background-color: var(--color-yellow);
+            background-color: var(--color-blue);
         }
     }
 }
@@ -103,7 +103,7 @@ body,
 .right {
     justify-self: end;
     grid-column: 3/4;
-    padding-right: 8px;
+    padding: 0 8px;
 }
 
 .logo,
@@ -118,8 +118,9 @@ body,
     display: flex;
 }
 
-.tiling-direction {
-    margin-right: 10px;
+.tiling-direction .btn {
+    transform: translateY(-1px);
+    color: var(--color-blue);
 }
 
 .workspaces {
@@ -174,12 +175,11 @@ body,
         height: 5px;
         width: 5px;
         border-radius: 100%;
-        background-color: var(--color-yellow);
+        background-color: var(--color-accent);
     }
 }
 
-.binding-mode,
-.tiling-direction {
+.binding-mode {
     background: var(--color-background2);
     line-height: 1;
     padding: 4px 8px;
@@ -283,10 +283,6 @@ body,
     color: var(--color-accent);
 }
 
-.tiling-direction .icon {
-    color: var(--color-green);
-}
-
 .up-checker .icon {
     background-color: var(--color-blue);
     margin-right: 1ch;
@@ -311,7 +307,7 @@ body,
 }
 
 .battery .icon {
-    color: var(--color-blue);
+    color: var(--color-yellow);
 }
 
 .clock .icon {
