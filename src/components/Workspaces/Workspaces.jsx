@@ -1,8 +1,13 @@
-import { useMemo } from "react"
+import { useEffect, useMemo, useState } from "react"
 import Button from "../Button/Button"
 
 const Workspaces = ({ allWorkspaces, runCommand }) => {
+    const [monitors, setMonitors] = useState()
     const mainRes = useMemo(() => allWorkspaces[0].width, [])
+
+    useEffect(() => {
+        //allWorkspaces.reduce((acc, ws) => ({...acc, amount: [ ws.width ]: acc[ws.width] + 1}), {})
+    }, [allWorkspaces])
 
     return (
         <div className="workspaces">
